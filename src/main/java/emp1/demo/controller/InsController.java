@@ -27,10 +27,7 @@ public class InsController {
 	@GetMapping("home")
 	public String listStudents(Model model) {
 		model.addAttribute("studentrecords", i.getAll());
-		UserRecord ap = new UserRecord();
-		ap.setEmail("emil@com");
-		ap.setFirstname("vamsi");
-		i.usave(ap);
+		
 
 		return "home"; // students.html
 	}
@@ -44,9 +41,7 @@ public class InsController {
 	public String addap(Model model) {
 		model.addAttribute("ins", i.getAll());
 		List<Studentrecord> ap = i.getAll();
-		for (int i = 0; i < ap.size(); i++) {
-			System.out.println(ap.get(i).getName());
-		}
+		
 
 		return "registeredData";
 	}
